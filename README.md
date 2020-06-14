@@ -137,3 +137,42 @@ Limitations:
  In every sprint 7 to 9 members will works
  each sprint will be delivered from one week to 3 weeks time
  
+ Why we should go for Devops???
+----------------------------------
+Devops and aglie both are different models.
+
+Similarities:
+----------------
+1. Both are software development methodologies.
+2. Both models concentrating on rapid software development with team collaboration.
+
+
+Differences:
+--------------
+1. The difference will come once development of the project completed.
+
+Agile model talks about only development but not operations.
+Devops model talks about complete product life cycle like development and operations.
+
+2. In Agile model, separate people are responsivble for development,
+testing, deployment etc.
+
+But in devops, the devops engineer is responsivble for everythings like devvelopment to operation
+and operations to development.
+
+Devops engineering also called devops generalist
+
+3. Agile model wont force us to automation tools.
+But Devops model is completely based on automation.
+
+4. Agile is always ginving highest prioproty only for speed.
+Devops giving the priority for both quality and speed.
+
+5. In agile, client is resposible to give the feedback for the sprint.
+But in Devops, immediate feedback is aviable from the monitoring tools.
+
+What is Devops?
+It is a new culture/process
+
+It is the process of continous development,continous build,continous test, continous relaese of the software.
+
