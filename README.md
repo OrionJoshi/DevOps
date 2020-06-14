@@ -54,3 +54,21 @@ System Admin
 Database Admin
 Network Admin
 etc
+
+Devops is a combination of development and Operations.
+The main objective of devops is to implement collaboration bet development
+and operation teams
+
+To Uderstand this new Devops culture, we havve to aware already existing SDLC Modesels
+SDLC--> Software Development Life Cycle
+
+1. Waterfall Model
+2. Prototype Model
+3. Incremental/Iterative Model
+4. Spiral Model
+5. RAD Model
+6. Big-Bang Model
+7. Fish Model
+8. V Model
+9. Agile Model
+10. Devops Model or culture
