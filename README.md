@@ -101,3 +101,39 @@ Limitations:
  Best suitable id requiremets are fixed
  
  Best suitable for small projects
+ 
+# Agile Model:
+ -----------------
+ This was the most frequently used and hot cake model in software development.(lasted for almost more than 10 years)
+ Agile Model is divided into multiple sub models
+ 
+ - Rational Unify Process(RUP)
+ - Adaptive Software Development(ASD)
+ - Feature Driven Development(FDD)
+ - Crystal Clear
+ - Dynamic Software Development Method(DSDM)
+ - EXtream Programming(XP)
+ - SCRUM Model (Most Popular and frequently used) etc
+ 
+ Agile==>Speed
+ SCRUM is Agile based model
+ It is not linear sequential Model.
+ It is iterative model. Total software product will be developed increament by increament
+ and each increament is called a sprint.
+ SPRINT
+
+ e.g:
+ Website 100 pages bulid
+
+ 10 pages
+ continuous delivery
+ Continuous Feedback
+ Requirement changes in the middle time
+ Client Statisfaction is very high
+ Less Development cost
+ Less Development time
+
+ SCRUM is derived from Rugby Game
+ In every sprint 7 to 9 members will works
+ each sprint will be delivered from one week to 3 weeks time
+ 
