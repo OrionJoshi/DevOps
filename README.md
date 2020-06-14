@@ -62,13 +62,42 @@ and operation teams
 To Uderstand this new Devops culture, we havve to aware already existing SDLC Modesels
 SDLC--> Software Development Life Cycle
 
-1. Waterfall Model
-2. Prototype Model
-3. Incremental/Iterative Model
-4. Spiral Model
-5. RAD Model
-6. Big-Bang Model
-7. Fish Model
-8. V Model
-9. Agile Model
-10. Devops Model or culture
+- Waterfall Model
+- Prototype Model
+- Incremental/Iterative Model
+- Spiral Model
+- RAD Model
+- Big-Bang Model
+- Fish Model
+- V Model
+- Agile Model
+- Devops Model or culture
+
+1. Water Fall Model:
+------------------------
+Requirement Gathering/Collection
+			Requirement Analysis
+				         Design
+					         Coding
+					           Testing
+						             Release
+							              Maintenance
+Also Know as Linear squantial Model
+
+Limitations:
+------------
+
+ 1. Development time will be increase
+ 2. Cost of development will ne increases
+ 3. It won't accept requirement changes in the middle.
+ 4. Client Satisfaction is very very low
+ 5. Bug fixing is a very costly bez we cannot identify bugs in early stages of life cycle.
+ 6. Not at all suitable if requirements keep on changing
+ 7. Not suitable for large prjects
+
+ Advantages:
+ It is very simple and easy to implement
+ 
+ Best suitable id requiremets are fixed
+ 
+ Best suitable for small projects
