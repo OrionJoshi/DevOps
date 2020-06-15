@@ -198,3 +198,12 @@ Client project
 We should not overwrite our code
 Every version we have to maintain
 100 developer
+## Importance of VCS
+1. Maintaining multiple version manually is very complex activity
+2. Every change should be tracked
+	who did the change
+	when he did the change
+	which changes he did etc
+3. Overwriting of the code sholud not be happen
+4. developere have to share their code to peer developers, so that multiple developers will work in collaberation way.
+5. Parallel development must be requried
