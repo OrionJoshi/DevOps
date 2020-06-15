@@ -176,3 +176,25 @@ It is a new culture/process
 
 It is the process of continous development,continous build,continous test, continous relaese of the software.
 
+# Version Control System Tool:
+ -----------------------------
+ Version Control System is also known as Software Configuration Managment(SCM) or Source code Management(SCM)
+
+Need of version Control system?
+-----------------------------------
+Assume
+Developer--->Write code--->Files
+Client--->Durga
+Requriment--->Please Develop this project
+
+Client project
+	|--100 files developed
+	|--client suggenst some changes
+	|--I changed some files source code to meet client requirement
+ 	|--I gave the demo and client suggested some more changes
+	|--I changed some files source code to meet client requirement
+	|--I gave demo 3rd times
+
+We should not overwrite our code
+Every version we have to maintain
+100 developer
