@@ -207,3 +207,10 @@ Every version we have to maintain
 3. Overwriting of the code sholud not be happen
 4. developere have to share their code to peer developers, so that multiple developers will work in collaberation way.
 5. Parallel development must be requried
+#### How Version Control system works:
+
+Version control system always talks about files which contain source code
+Use Version control system if we requried multiple version of same file for eg
+tester use for test script
+Architect for Documnets
+Project Manager for excel sheets
