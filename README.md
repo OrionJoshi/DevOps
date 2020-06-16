@@ -234,3 +234,17 @@ In every commit there is unique commit id which contain all information
 
 ### Checkout: 
 The process of sending of sending files from repository to working directory
+# Benefite of Version Control System:
+
+1. We can different versions and we can choose any version based on client
+2. With every version/commit we can maintain metadata like
+ 	commit message
+	who did changes
+	when he did the change
+	what changes he did
+3. Developers can share the code to the peer developers in very easy way.
+4. Multiple developer can work in collaborative way
+5. Parallel development.
+6.We can provide access the control like
+ 	who can read code
+	who can modify code
