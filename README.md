@@ -214,3 +214,23 @@ Use Version control system if we requried multiple version of same file for eg
 tester use for test script
 Architect for Documnets
 Project Manager for excel sheets
+## Basic Version Control System Terminology:
+### Working dirctory: 
+Where developers are required to create/modify files.
+Here version control is not applicable. Here we wont use the work like version-1
+version-2 etc
+						
+### Repository: 
+Where we have to store file and metadata.
+Here version control is applicable.
+Here we can talk about different version of file
+
+### Commit: (Process name or group of files it is noun(things which is going to hold) or verb(process))
+The process of sending files from working directory to repository
+
+In every commit the modified file only form new version others are inheriated from previous version
+
+In every commit there is unique commit id which contain all information
+
+### Checkout: 
+The process of sending of sending files from repository to working directory
