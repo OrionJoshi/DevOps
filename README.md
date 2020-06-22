@@ -260,3 +260,20 @@ continue his work
 The total project code wiill be stored in central repository
 It is very easy to setup and easy to use.
 CVS,SVN,Perforce,Clearcase,TFS etc...
+
+### Limitations:
+
+1. The total code stored at a single place(center repository)
+   Single point of failure.
+   If Something goes wrong....recovery is very difficult.
+
+2. All checkout and commit operations will be performed by connecting with remote
+   central repository server. i.e. all developers should be connected with central repository.
+   If network outages(down),version control wont be available for the developers
+developers.
+
+ Bank---->Server down
+3. All checkout and commit operations will be performed by connecting with remote central repository server.
+The operations will be performed over the network and performance is low.
+
+4. IF huge numbers of developer or number of files increases then organizartion of central repository is a bit difficult.
