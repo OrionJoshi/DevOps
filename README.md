@@ -248,3 +248,15 @@ The process of sending of sending files from repository to working directory
 6.We can provide access the control like
  	who can read code
 	who can modify code
+	
+### Types of version control sytems:
+- Centralized Version Control System
+-  De-centralized/ Distributed Version Control System
+
+#### Centralized Version Control System:
+Centralized----------->
+Only one central repository, every developer is required to connect with that to
+continue his work
+The total project code wiill be stored in central repository
+It is very easy to setup and easy to use.
+CVS,SVN,Perforce,Clearcase,TFS etc...
