@@ -285,3 +285,9 @@ If 4 developers are there, then 4 repositories will be there.
 
 2. Even network outage, still version control is available.
 3. There is no question of single point of failure, because  repository is availble on every developer
+
+
+Commit and Checkout:
+----------------------
+These operations will be performed locally between working directory and repository.
+To perform these operations netwok is not required.
