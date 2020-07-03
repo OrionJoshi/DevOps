@@ -277,3 +277,11 @@ developers.
 The operations will be performed over the network and performance is low.
 
 4. IF huge numbers of developer or number of files increases then organizartion of central repository is a bit difficult.
+
+Repository is distributed
+If 4 developers are there, then 4 repositories will be there.
+
+1. All commit and checkout operation will be performend locally and hence performance is more.
+
+2. Even network outage, still version control is available.
+3. There is no question of single point of failure, because  repository is availble on every developer
