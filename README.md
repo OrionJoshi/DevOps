@@ -291,3 +291,16 @@ Commit and Checkout:
 ----------------------
 These operations will be performed locally between working directory and repository.
 To perform these operations netwok is not required.
+
+Pull and Push:
+---------------
+
+Push: The process of sending files from our repository to other's repository
+Pull: The process of getting files from our repository to other's repository
+
+push and pull will be performed between 2 repositories.
+These are remote operatios.
+Compulsory network must be there.
+
+
+e.g:GIT, Mercurial, Fossil(For distributed VCS)
