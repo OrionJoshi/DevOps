@@ -304,3 +304,21 @@ Compulsory network must be there.
 
 
 e.g:GIT, Mercurial, Fossil(For distributed VCS)
+
+
+Distributed VCS with Remote Repository:
+-----------------------------------------
+Remote Repository vs Centralized Repository:
+-------------------------------------------
+1. Commit and Checkout operations are performing on local repository but not on remote repository
+2. every developer has his own local repository.
+
+The main josb of remote repository is just to share our code to peer developers.
+ 
+
+Remote Repository server:
+------------------------
+Github
+Gitlab
+BitBucket
+Cloud platform
