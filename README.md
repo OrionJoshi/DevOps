@@ -322,3 +322,14 @@ Remote Repository server:
 - Gitlab
 - BitBucket
 - Cloud platform
+
+## GIT:
+
+GIT is Distributed Version Control System Tool.
+
+Linux===>It is not an operating system. It is just Kernel name.
+Who develop linux kernel Linus Torvalds(Finnish Software Engineer)
+
+Operating system name: GNU/Linux
+
+GIT is developed by Linus Torvalds.
