@@ -318,7 +318,7 @@ The main josb of remote repository is just to share our code to peer developers.
 
 Remote Repository server:
 ------------------------
-Github
-Gitlab
-BitBucket
-Cloud platform
+- Github
+- Gitlab
+- BitBucket
+- Cloud platform
