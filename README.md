@@ -333,3 +333,38 @@ Who develop linux kernel Linus Torvalds(Finnish Software Engineer)
 Operating system name: GNU/Linux
 
 GIT is developed by Linus Torvalds.
+
+### Features of GIT:
+---------------------
+Why GIT is very popular???
+
+1. Distributed:
+---------------
+A) No single point of faliure. Every developer has local repository.
+B) Performance ismore | speed is more. because commit and checout happens in local repository
+C) Without network also, developer can continue his work.
+   Workspace and remote repository need not be connected always.
+D)...
+
+
+2. Staging Area:
+----------------
+In GIT commit is 2-step process.
+First we have to add files to the staging area and then we have to commit  from that staging area.
+
+Advantage of staging area is we can cross check or double check our changes before commit . 
+If everything is fine then we can commit.
+
+Assume
+12GB files we have to store in SVN (Centralized repository)
+GIT requires only 420MB.
+The data stored in Git is always in hashing
+Only Snapshot of our data is taken by Git(it is internally using some mechanism, some algorithm to convert data in hashing object that converted data is going ti store)
+
+3. Branching And Merging:
+--------------------------
+We can create and work on mutilpe branches simutaneously and all these  branches
+are isolated from each other. It enables multiple worl flows.
+
+4. Freeware and  and open source
+5. It provides support for multiple platforms
