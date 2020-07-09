@@ -368,3 +368,24 @@ are isolated from each other. It enables multiple worl flows.
 
 4. Freeware and  and open source
 5. It provides support for multiple platforms
+
+GIT Architecture:
+------------------
+Git has 2 types of repository
+1. Local repository
+2. Remote repository
+
+Usually the total project code will be available in remote repository
+The current work of developer will be stored in local repository.
+
+New files will be created in working directory.
+Once wrk completed, we have to add these files to staging are for this we have to use
+Command - git add
+
+git add===>Sending files from working directory to staging area
+git commit===>Staged changes will be moved to local repository
+git push===>To move files from local repository to remote repository
+git clone===>To create a new local repository from the remote repository
+git push===> To get updated files from remote repository to local repository
+
+cloning===>creating exactly duplicate copy
