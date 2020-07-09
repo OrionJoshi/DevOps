@@ -389,3 +389,62 @@ git clone===>To create a new local repository from the remote repository
 git push===> To get updated files from remote repository to local repository
 
 cloning===>creating exactly duplicate copy
+
+
+Life Cycle of File in Git:
+-----------------------------
+Every file in the git is one of the following 4 states:
+
+1.Untracked
+2.Staged
+3.In Repository/Committed
+4.Modified
+
+1. UNtracked:
+-------------
+Every new file will be created in working directory . Git does not aware these new
+files. Such type of files are said to be in "untracked"
+
+git status
+---> To know status of files in all area
+
+2. Staged:
+--------------
+The files which are added to staging area are said to be in the staged area
+
+git add abc.txt
+git add abc.txt bcd.txt
+git add .
+git add *.txt
+
+3. Any file which is commited is said to be in repositroy state or commited state
+
+We can staged changes by using git commit 
+
+git config --global user.email "------"
+git config --global user.name "username"
+
+git message===> Mandatory
+
+git commit -m "A new file a.txt added"
+
+
+Created a file in working directory with some content==>Untracked
+Once we add this file to stating area===>Staged state
+		git add a.txt
+
+we have to commit changes from staged area to local repository==>In
+Repository/Commited state
+ git commit -m "Commit message"
+
+4. Modified:
+-----------
+If the file added to staging  area or commited===>tracked by git
+
+is===>It will list all files in working dirctory.It is linux command.
+git ls-files====>It will list all files which are tracked by git and it id git command.
+
+Modified:Any file which is already tracked (add or commit), but it is modified in working directory
+is said to be in modified state
+
+-- git log is used to see the different version of files
