@@ -448,3 +448,219 @@ Modified:Any file which is already tracked (add or commit), but it is modified i
 is said to be in modified state
 
 -- git log is used to see the different version of files
+
+# git Diff command
+------------------
+#### In the content of file
+- working directory vs staging area
+- working directory vs last commit
+- staging area vs last commit
+- working directory vs specified commit
+- staging area vs specified commit .etc....
+Demo project:
+file1.txt
+first line in file1.txt
+second line in file2.txt
+
+file2.txt
+-----------
+first line in file1.txt
+second line in file2.txt
+
+first commit: 2 files and each have 2 lines
+
+file1.txt
+--------
+first line in file1.txt
+second line in file2.txt
+Third line in file1.txt
+Fourth line in file2.txt
+
+file2.txt
+-----------
+first line in file1.txt
+second line in file2.txt
+Third line in file1.txt
+Fourth line in file2.txt
+
+git commit -am "2 files and each have four line"
+
+second commit: 2 file and each have four line
+
+NOw
+file1.txt
+--------
+first line in file1.txt
+second line in file1.txt
+Third line in file1.txt
+Fourth line in file1.txt
+fifth line in file1.txt
+
+git add file1.txt
+
+file1.txt
+--------
+first line in file1.txt
+second line in file1.txt
+Third line in file1.txt
+Fourth line in file1.txt
+fifth line in file1.txt
+sixth line in file1.txt
+
+case-1:To see difference in file content between working directory and staging area
+-----------------------------------------------------
+git diff file1.txt
+ 	To compare working directory and staging area 
+
+output:
+1) diff --git a/file1.txt b/file1.txt
+a/file1.txt---->scoure copy which means staging area
+b/file1.txt--->Destination copy which means working directory
+
+2) index 8445404..246caab 100644
+  8445404---->hash of source file content(staging)
+  246caab---->hash of destination file content(working directory)
+
+  100644----->Git file mode
+
+  first 3 digits(100) ----> represents the type of file ASCII text
+  Next 3 digit(644) ------> represents file permission
+			644--> rw-r--r--
+			4-->r
+			2-->w
+			1-->x
+3) --- a/file1.txt
+	source copy missing some line(staging area)
+4) +++ b/file1.txt
+	+++ means new line is add in destination		
+
+5) @@ -3,3 +3,4 @@
+ -3,3
+- means source version(staging area)
+  from 3rd line onwards total 3 line
+ Third line in file1.txt
+ Fourth line in file1.txt
+ Fifth line in file1.txt
+
+ +3,4
+   + means destination version
+   from 3rd line onwards total 4 lines
+
+    Third line in file1.txt
+    Fourth line in file1.txt
+    Fifth line in file1.txt
+   +sixth line in file1.txt
+
+if any line prefixed with space means it isunchanged.
+if any line prefixed with + means it is added in destination copy.
+if anuy line prefixed with - means it is removed in destinatin copy
+
+
+
+We can conclude one new line added in working copy when compared with  staged copy
+
+2) Working directory VS last commit:
+---------------------------------------
+Last commit can be referenced by HEAD
+
+git diff HEAD file1.txt
+	compare last commit and working directory
+
+
+3) staged copy vs last commit:
+------------------------------------
+We have to use --staged option or --cached option
+
+git diff --staged HEAD file1.txt or
+git diff --staged (HEAD optional) file1.txt
+
+4) working directory vs specific commit:
+---------------------------------------------
+
+git log --online 
+d616daf (HEAD -> master) 2 files and each file contains 4 lines
+ef7a19f 2 files and each file contains 2 lines
+ 
+git diff ef7a19f(hash above commit) file1.txt
+
+5) staging area vs specific commit:
+---------------------------------
+git diff --staged ef7a19f file1.txt
+
+6) Between two specified commit:
+-------------------------------------
+
+d616daf (HEAD -> master) 2 files and each file contains 4 lines
+ef7a19f 2 files and each file contains 2 lines
+
+git diff(source) ef7a19f d616daf file1.txt
+
+Lets do some opposite
+ git diff(des)d616daf (source) ef7a19f file1.txt
+
+7) last commit vs last but one commit:
+--------------------------------------
+E.g.
+commit -7
+commit -6
+commit -5
+commit -4
+commit -3
+commit-2
+commit -1
+we have to do between 7 and 6
+git diff HEAD HEAD~1(last but one commit i.e. 6) file1.txt
+git diff HEAD HEAD^1(last but one commit i.e. 6) file1.txt
+git diff HEAD HEAD^(last but one commit i.e. 6) file2.txt
+
+8) compare all files:
+---------------------------
+d616daf (HEAD -> master) 2 files and each file contains 4 lines
+ef7a19f 2 files and each file contains 2 lines
+
+git diff ef7a19f d616daf
+or git diff HEAD~1 HEAD
+
+9) To see the differences in content of between 2 branches
+-------------------------------------------------------------
+git diff master test
+
+10) To see difference in local repository and remote repository
+--------------------------------------------------------------
+git diff master(local) origin/master(remote)
+
+summary:
+1) Working directory vs staged copy
+   git diff file1.txt
+
+2) working directory vs last commit 
+   git diff HEAD file1.txt
+
+3) Staging area Vs last commit
+   fir diff --staged HEAD file1.txt
+   git diff --cached HEAD file1.txt
+   git diff --staged file1.txt
+
+4) Working dir vs specified commit:
+   git commitid file1.txt
+
+5) Staging area vs specified sommit:
+   git diff --staged commitid file1.txt
+
+6) Between two commits
+   git diff source_commit_id destination commit_id file1.txt
+
+7) last commit vs last but one commit:
+   git diff HEAD HEAD~1 file1.txt
+   git diff HEAD HEAD^1 file1.txt
+
+8) To compare all file
+  git diff source_commitid destination_commit_id
+
+9) Two branches in local repository
+  git diff source_branch_name destination_branch_name
+
+10) local repo vs remote repo:
+
+git diff local_branch_name remote_branch_name
+git diff master origin/master
