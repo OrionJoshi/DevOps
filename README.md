@@ -662,5 +662,13 @@ summary:
 
 10) local repo vs remote repo:
 
-git diff local_branch_name remote_branch_name
-git diff master origin/master
+- git diff local_branch_name remote_branch_name
+- git diff master origin/master
+
+## Git checkout command::
+-------------------------------
+we can use checkout commands to discard unstaged changes in the tarcked files 
+of working directory.
+
+unstaged changes ===> The changes which are not added to staging area
+tracked files  ====> The files which are tacked by git
