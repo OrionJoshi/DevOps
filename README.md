@@ -670,5 +670,5 @@ summary:
 we can use checkout commands to discard unstaged changes in the tarcked files 
 of working directory.
 
-unstaged changes ===> The changes which are not added to staging area
-tracked files  ====> The files which are tacked by git
+- unstaged changes ===> The changes which are not added to staging area
+- tracked files  ====> The files which are tacked by git
