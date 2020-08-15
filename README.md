@@ -449,7 +449,26 @@ is said to be in modified state
 
 -- git log is used to see the different version of files
 
-# git Diff command
+## How to download Git
+#### How to install git on windows:
+ -- https://git-scm.com/download/win
+
+ git-scm===>Software Configuration Management
+
+project1
+
+git init ===> To provide/create an empty repository to our workspace so that version
+control is available to our working directory.
+ The folder name is .git
+
+	GIT log - used to see the history of commited 
+
+If the folder has aleady initalize git agian reinitialization wont affect the folder
+
+If Git already tracked the file the adding and commiting stage is done by single command
+	git commit -a -m 'commit messaged'
+
+## git Diff command
 ------------------
 #### In the content of file
 - working directory vs staging area
