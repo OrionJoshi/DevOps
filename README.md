@@ -483,6 +483,27 @@ modified files
 staged files etc
 
 If we want concise output we have to use -s option
+
+3. git add:
+
+To add files from  working directory to staging area
+Once we added files to staging  area, then git tracks these files and ready for 
+commit.
+
+staging area-->index area or cache area
+
+It is a logical or virtual area but not physical area.
+
+	i)To add all files in cwd
+	   git add .
+	   git add *
+	   git add -A
+	ii)To add particular files
+	   git add file1.txt file2.txt
+	iii) We can use even regular expression patterns also
+	   git add *.java
+           git add *.txt
+
 ## git Diff command
 ------------------
 #### In the content of file
