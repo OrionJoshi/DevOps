@@ -468,6 +468,14 @@ If the folder has aleady initalize git agian reinitialization wont affect the fo
 If Git already tracked the file the adding and commiting stage is done by single command
 	git commit -a -m 'commit messaged'
 
+### Examples TO describe basic Git commands
+
+1.git init
+
+Once we create workspace, if we want version control,
+we required a repository.called local repository(.git)
+
+
 ## git Diff command
 ------------------
 #### In the content of file
