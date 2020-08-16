@@ -475,7 +475,14 @@ If Git already tracked the file the adding and commiting stage is done by single
 Once we create workspace, if we want version control,
 we required a repository.called local repository(.git)
 
+2. git status:
 
+It shows the current status of all files in each area, like
+untracked files
+modified files
+staged files etc
+
+If we want concise output we have to use -s option
 ## git Diff command
 ------------------
 #### In the content of file
