@@ -542,7 +542,15 @@ r--->4
 w--->2
 x--->1
 
-## git Diff command
+5) git log:
+
+It shows history of all commits
+
+commit id
+author name and mail id
+timestamp
+commit message
+## Git Diff command
 ------------------
 #### In the content of file
 - working directory vs staging area
