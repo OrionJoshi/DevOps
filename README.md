@@ -550,6 +550,35 @@ commit id
 author name and mail id
 timestamp
 commit message
+
+6) git config:
+
+git config command can be used for git configurations like user name, mail id
+
+git config --list
+
+	to list out all configuration
+	user.name=...
+	user.email=...
+	
+used to change config
+git config user.name 'Ravi'
+git config user.email 'ooo@gmail.com'
+
+After it global configuration is same but while commiting we can see the change
+
+we can also use global option also
+
+git config --global user.name 'Ravi'
+git config --global user.email 'ooo@gmail.com'
+- global vs with global
+
+For all repository which is mangaed by current git--->global
+
+with global means:configuration applicable for all repository
+without global means: configuration applicable only for current repository
+
+
 ## Git Diff command
 ------------------
 #### In the content of file
