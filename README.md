@@ -503,6 +503,44 @@ It is a logical or virtual area but not physical area.
 	iii) We can use even regular expression patterns also
 	   git add *.java
            git add *.txt
+4. git commit:
+
+If we wnat to commit staged changes
+
+git commit -m "commit message"
+
+for evey commit a unique commmit id generated (also known as hash) which is
+hexadecimal number of 40 characters
+
+For every commit git records
+author name and mail id
+timestamp
+commit message
+	for example-
+	
+	$ git commit -m "New files added"
+	[master (root-commit) dcb4108(commit hash fist 7 digit)] New files added
+	2 files changed, 2 insertions(+)
+	create mode 100644 file1.txt
+	create mode 100644 file2.txt
+      
+	$git log
+	commit dcb4108ddc8e5e3ba6b0a11ab4245718bbd7a1da(SHA-1 hash) (HEAD -> master)
+	Author: ---- <.................com>
+	Date: Sat may 16 20:54:34 2020 +0530
+New files added
+
+commit id is unique which can be used to identify commit
+The first 7 characteralso unique.(we can use first 7 commit for any reference commit)
+
+	create mode 100644 file1.txt
+	create mode 100644 file2.txt
+first 3 number means the type of file (100 means ascii text data)
+644---->File permission:rw-r--r--(owner,user,group)
+
+r--->4
+w--->2
+x--->1
 
 ## git Diff command
 ------------------
