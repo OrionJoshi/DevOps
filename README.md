@@ -578,9 +578,60 @@ For all repository which is mangaed by current git--->global
 with global means:configuration applicable for all repository
 without global means: configuration applicable only for current repository
 
+### Git log:
+
+If we want to see history all commits in local repository====> git log
+most commonly used command.
+
+How to see log information of a particular files:
+
+git log file1.txt
+
+Option-1: --oneline option to get brief information
+
+git log --oneline
+	it will show oneline per commit
+	commitid(7 chara)+commit message
+*** This option is very helpful if we have lot of commits and 
+    to identify based in message
+    
+Option-2: -n option to limit the number of commit ot display
+
+git log -n 2(onlylatest 2 commits)
+or git log -2
+or git log --max-count=3
+
+Option-3: --grep option to search based on given pattern  in commit messages.
+
+git log --grep=pattern
+
+git log --grep="added" --oneline
+
+Option-4: show commits more recent than a specific date or time.
+
+--since="2020-04-25"
+--after="2020-04-25"
+--after="10 days ago"
+--after="3 hours ago"
+
+Otion-5:Show commits older than a specific time:
+
+--until="17-05-2020"
+--before="17-05-2020"
+--before="5 minutes ago"
+
+Option-6:Show commits based on author
+
+--author=<pattern>
+
+git log --author=jon
+
+Option-7: --decorate option to display extra inforamtion
+
+branch name, HEAD,tags,information etc
 
 ## Git Diff command
-------------------
+
 #### In the content of file
 - working directory vs staging area
 - working directory vs last commit
