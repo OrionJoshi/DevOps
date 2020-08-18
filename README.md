@@ -846,8 +846,55 @@ summary:
 - git diff local_branch_name remote_branch_name
 - git diff master origin/master
 
-## Git checkout command::
--------------------------------
+## Visual tool for checking differences
+
+Helix Visual Merge Tool(p4merge)
+Meld
+etc
+
+p4merge===>Merge Tool aswell as Diff tool
+
+centarlizes VC - SVN,CVS,ClearCase,Perforce
+
+Perforce 4 merge ===>p4merge
+
+### How to download and install p4merge tool:
+
+https://www.Perforce.com
+
+Download Helix Visual Merge Tool
+
+Select only Merge and Diff Tool.
+
+### How to configure p4merge with git:
+
+#### difftool configuration:
+
+- git config --global diff.tool p4merge
+- git config --global difftool.p4merge.path "C:\Program Files\Perforce\p4merge.exe"
+- git config --global difftool.prompt false
+
+#### mergetool configuration:
+
+- git config --global merge.tool p4merge
+- git config --global mergetool.p4merge.path "C:\Program Files\Perforce\p4merge.exe"
+- git config --global mergetool.prompt false
+
+To test these set or not
+git config --global --list
+
+Now see diff between stage and working
+git difftool file1.txt
+
+#### working directory vs last commit:
+
+git difftool HEAD file1.txt
+
+Note only add tool after diff and remaininig are same as above
+
+Note tool only show diff between one file only
+## Git checkout command
+
 we can use checkout commands to discard unstaged changes in the tarcked files 
 of working directory.
 
