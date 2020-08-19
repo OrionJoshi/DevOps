@@ -900,3 +900,39 @@ of working directory.
 
 - unstaged changes ===> The changes which are not added to staging area
 - tracked files  ====> The files which are tacked by git
+
+If there is one line in local repo, two line in staging area and three line in
+working area. If we want to ignore the changes in working dir we use git checkout
+command
+
+$ git checkout
+
+M       file1.txt
+It will list out the files for which checkout is applicable.
+
+
+git checkout -- file1.txt
+
+$ cat file1.txt
+first line in file1.txt
+second line in file1.txt
+(Discard third lines)
+
+2. $ git checkout .
+
+Updated 2 paths from the index
+
+USED to checkout all files
+
+NOTE::
+	git checkout -- file1.txt
+	
+		to discard unstaged changes in file1.txt
+		
+	git checkout .
+	
+		to discard unstaged changes in every tracked file of working dire
+		
+	git checkout
+	
+		list all eligible files, for which checkout is applicable
