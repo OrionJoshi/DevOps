@@ -925,6 +925,7 @@ Updated 2 paths from the index
 USED to checkout all files
 
 NOTE::
+
 	git checkout -- file1.txt
 	
 		to discard unstaged changes in file1.txt
@@ -936,3 +937,48 @@ NOTE::
 	git checkout
 	
 		list all eligible files, for which checkout is applicable
+
+### Git references(master and HEAD)
+
+For most of the commands (like git log, git diff etc) we have to use commit ids
+as arguments.But remembering these commit ids is very difficult.
+
+40 length commit id | 7 characters
+
+Git provides some sample names for these commit ids. We can use these names directly
+instead of commit ids.These are just pointers to commit ids.
+These smaples names are nothing but references or refs.
+
+git references are pointers to commit ids.
+
+The most recent commit id ====> master or HEAD
+
+There is a folder called .git and folder inside it called refs directory==>All ref will be stored
+heads,tags and remotes.(references examples)
+
+#### What is master?
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+1. master is the name of the branch.
+2. It is a reference(pointer) to last commit. Hence where ever last commit id
+required, we can use simply master.
+
+git show 7 dig commit id or master (show same result)
+
+git show master
+
+git show 99eb4e5
+
+but 
+git show master~1 refer to last but one commit
+
+git show master~2 refer to last but two commit
+
+#### What is HEAD:
+
+HEAD is a reference to master
+
+It is symbolic reference which points to another reference(master)
