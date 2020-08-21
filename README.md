@@ -982,3 +982,14 @@ git show master~2 refer to last but two commit
 HEAD is a reference to master
 
 It is symbolic reference which points to another reference(master)
+
+By default HEAD is always pointing to the master.
+
+master information available in .git/refs/head/master
+
+HEAD information is available in .git directory
+
+
+Let see info of head
+$ cat HEAD
+ref: refs/heads/master
