@@ -1013,3 +1013,9 @@ $ git reset file1.txt
 Unstaged changes after reset:
 
 M       file1.txt
+
+#### git checkout vs git reset:
+
+git checkout can be used to discard unstaged changes in working directory.
+
+git reset can be used to discard staged changes from staging area.	
