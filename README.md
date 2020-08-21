@@ -1019,3 +1019,21 @@ M       file1.txt
 git checkout can be used to discard unstaged changes in working directory.
 
 git reset can be used to discard staged changes from staging area.	
+
+#### git rm --cached vs git reset:
+
+git rm --cached file1.txt ===> It will delete the file from staging area
+
+git reset file1.txt ==> The file wont be delete from staging area, but reset to 
+
+previous state(one step back)
+
+Q.We modified the content of file1.txt and added to staging area.But we want to
+
+ignore those changes in both staging area and in working directory. for this which command
+
+are required to use??
+
+1.git reset file1.txt
+
+2.git checkout file1.txt
