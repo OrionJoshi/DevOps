@@ -993,3 +993,23 @@ HEAD information is available in .git directory
 Let see info of head
 $ cat HEAD
 ref: refs/heads/master
+
+### git reset command:
+
+just like reset to default setting
+
+There are two utilities of git reset command:
+1.To remove changes from staging area
+2.To undo commits at repository level
+
+#### Utility-1: To remove changes from staging area:
+
+It will bring changes from staging area back to working directory.
+
+It is opposite to git add command.
+
+$ git reset file1.txt
+
+Unstaged changes after reset:
+
+M       file1.txt
