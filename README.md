@@ -1102,3 +1102,8 @@ file1.txt  file2.txt  file3.txt
 - git add file3.txt;git commit -m 'file3 added again'
 
 2. to remove from working directory- git checkout -- filename
+
+Note: 
+1) It is not possible to remove random commits.
+2) mixed reset will remove changes from local repository and staging area.It wont touch working directory
+3) We can revert deletion because changes are available in working directory.
