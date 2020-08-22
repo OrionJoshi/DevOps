@@ -1056,3 +1056,49 @@ The allowed values for the mode are:
 	--mixed
 	--soft
 	--hard
+
+1. --mixed reset mode:
+
+It is the default mode.
+
+git reset --mixed commit_id
+
+git reset commit_id
+
+To discard/remove commits from repository and from staging area also.
+
+It wont touch working directory
+
+We can revert because changes are available in working directory
+
+$ git log --oneline
+
+	dd45bbb (HEAD -> master) file3 added
+	60f6643 file2 added ---> HEAD~1
+	9443b15 file1 added ---> HEAD~2
+
+To remove last commit:
+
+- git reset 60f6643
+- git reset --mixed 60f6643
+- git reset HEAD~1
+- git reset --mixed HEAD~1
+
+
+After that
+
+$ git ls-files
+
+file1.txt
+
+file2.txt
+
+$ ls
+
+file1.txt  file2.txt  file3.txt
+
+1.To add file3 to repository again
+
+- git add file3.txt;git commit -m 'file3 added again'
+
+2. to remove from working directory- git checkout -- filename
