@@ -1037,3 +1037,22 @@ are required to use??
 1.git reset file1.txt
 
 2.git checkout file1.txt
+
+#### Utitlity-2.To undo commits at repository level
+
+we can also use reset to undo commits at repository level
+
+syntax:
+
+git reset <mode> commit_id
+
+Moves the HEAD to the specified commit, and all remaining recent
+commits will be deleted from repository
+
+Mode will decide whether these changes are going to remove from staging area
+or not from working directory or not.
+
+The allowed values for the mode are:
+	--mixed
+	--soft
+	--hard
