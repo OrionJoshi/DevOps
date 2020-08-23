@@ -1107,3 +1107,19 @@ Note:
 1) It is not possible to remove random commits.
 2) mixed reset will remove changes from local repository and staging area.It wont touch working directory
 3) We can revert deletion because changes are available in working directory.
+
+Again we have to reverse it we have to add again and commit again
+
+2. --soft reset mode:
+
+Exactly same as --mixed except that is wont touch working directory and staging areas.
+
+To revert:
+
+git commit -m "message"
+
+usecase:
+
+1.If some files are missing in last commit, then add those files and commit again.
+
+2.If we forget to add defact number in the commit message
