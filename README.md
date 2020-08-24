@@ -1123,3 +1123,25 @@ usecase:
 1.If some files are missing in last commit, then add those files and commit again.
 
 2.If we forget to add defact number in the commit message
+
+3. --hard reset mode:
+
+It is exactly same as --mixed mode expect that changes will be removed from everywhere
+(local repository,staging area, working directory)
+
+It is impossible to revert back our changes and hence while using this command,
+we have to take a bit special care.
+
+--hard
+
+- commit-1
+- commit-2
+- commit-3
+- commit-4
+- commit-5
+
+$ git reset --hard 33b79bb(suppose commit-3)
+
+HEAD is now at 33b79bb file3 added again
+
+Then all 1 and 2 are commits are removed from every where
