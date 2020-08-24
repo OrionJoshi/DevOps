@@ -1176,3 +1176,9 @@ Then all 1 and 2 are commits are removed from every where
 - not possible to revert changes.
 
 - working tree will be clean
+
+NOTE: If the commits are confirmed to local repository and to discard those commits
+we can use git reset command.
+
+But if the commits are confirmed to remote repository then not recommanded to use
+reset command and we have to use revert command to discard the remote commits.	
