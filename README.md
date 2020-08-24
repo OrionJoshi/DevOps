@@ -1145,3 +1145,34 @@ $ git reset --hard 33b79bb(suppose commit-3)
 HEAD is now at 33b79bb file3 added again
 
 Then all 1 and 2 are commits are removed from every where
+
+#### --mixed vs --soft vs --hard:
+
+1. --mixed:
+
+ - delete changes from local repo and staging area
+ - It wont touch working directory.
+ - Possible to revert back changes.
+ 
+	1) git add
+	
+	2) git commit
+	
+ - working tree wont be clean
+
+2. --soft:
+
+ - deleted changes only from local repository.
+ - It wont touch staging area and working directory
+ - Possible to revert back changes.
+ 
+	1) git commit.
+
+ - working tree wont be clean
+
+3. --hard:
+
+- deleted changes from everywhere.
+- not possible to revert changes.
+
+- working tree will be clean
