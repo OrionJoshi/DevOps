@@ -1182,3 +1182,53 @@ we can use git reset command.
 
 But if the commits are confirmed to remote repository then not recommanded to use
 reset command and we have to use revert command to discard the remote commits.	
+
+### Git Aliasing:
+
+Alias-->Nick name or other alternative name
+
+git log --oneline===>git one
+
+git status===>git s
+
+If we have lengthy command then we have to use alias of git command
+
+
+Q1. Create alias name 'one' to the following command
+	git log --oneline
+
+1) Test whether alias name already used or not:
+
+git one
+
+git: 'one' is not a git command. See 'git --help'.
+
+The most similar commands are
+
+        clone
+        notes
+	
+2) Creating alias name:
+
+  original command: git log --oneline
+  
+  alias:one
+  
+  By using 'git config' command we can define aliases
+  
+  Syntax:
+  - git config --global alias.(aliasName) "original command" (Note while using original command dont use 'git')
+	
+   e.g.
+    - git config --global alias.one "log --oneline"
+
+   Result:
+   
+	 git one
+	 60f6643 (HEAD -> master) file2 added
+	 9443b15 file1 added
+AND Which is same as 
+
+ 	 git log --oneline
+	 60f6643 (HEAD -> master) file2 added
+	 9443b15 file1 added
