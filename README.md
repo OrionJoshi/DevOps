@@ -1249,3 +1249,22 @@ AND Which is same as
 that means
 
  $ git git status which is not git command
+
+#### Where these aliases will be stored??
+
+we have a file name .gitconfig file
+
+In linux user's home directory
+
+	In window
+	C:\Users\SHADOW(username)
+	there we have file called .gitconfig
+	you see like that
+	[alias]
+		one = log --oneline
+		s = status
+		ss = git status
+
+if we change it there will be change in git bash command
+
+Alias will work in any project untill it is configured with global
