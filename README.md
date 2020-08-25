@@ -1232,3 +1232,20 @@ AND Which is same as
  	 git log --oneline
 	 60f6643 (HEAD -> master) file2 added
 	 9443b15 file1 added
+
+2) Create alias for status
+
+      $ git config --global alias.s "status"
+
+ NOTE:git config --global alias.ss "git status" wont work if we check for command 'ss' we get
+ 
+	 $ ss
+	 bash: ss: command not found
+ AND
+ 
+	 $ git ss
+	 expansion of alias 'ss' failed; 'git' is not a git command
+ 
+that means
+
+ $ git git status which is not git command
