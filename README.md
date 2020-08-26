@@ -1409,3 +1409,16 @@ We make one directory now let us check
 But if we make files in dir directory then git will track it
 
 Whenever we are adding files, then implicitly directories also added
+
+### What is Branch and Need of Branching
+
+Branching:
+
+1. Important concept
+2. Mandatory concept and unavailable concept in real time project
+
+We created multiple files, did several commits are said to be in master branch.
+
+Master branch is default branch/main branch in git.
+
+Generally main source code we will place in master branch.
