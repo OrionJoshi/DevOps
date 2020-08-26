@@ -1391,3 +1391,21 @@ $ cat .gitignore
 - Ignore logs directory
 
   logs/
+
+### How git treats directories:
+
+GIT always worry about files but not directories.
+
+git never give any special importance for directories.
+
+$ mkdir dir
+
+We make one directory now let us check
+
+	$ git status
+	On branch master
+	nothing to commit, working tree clean
+
+But if we make files in dir directory then git will track it
+
+Whenever we are adding files, then implicitly directories also added
