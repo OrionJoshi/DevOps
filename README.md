@@ -1268,3 +1268,126 @@ In linux user's home directory
 if we change it there will be change in git bash command
 
 Alias will work in any project untill it is configured with global
+
+### Ignoring unwanted files and directory by using .gitignore file
+How to ignore unwanted files and directory
+
+In repository, we are saving our files.
+
+for e.g
+In locker in your house you will place valuable things like gold,cash,document but 
+it is unneccessary to place kids playing toys
+
+for e.g.
+
+	we have files
+	 Cstomer.java
+	 Account.java
+	 ReadME.txt
+	 server.log
+	 access.log
+
+Here we have to store only source code in reposotry (1 and 2)
+We can call git to ignore these files to saving to repository
+Dont track these files
+
+For this, 
+We have to create a special file:
+
+ .gitignore 
+ 
+In our working directory
+
+E.g
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+$ touch Customer.java
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+$ touch Account.java a.txt b.txt
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+$ touch .x .y
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+$ mkdir logs
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+$ touch logs/server.log logs/access.log
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+
+	$ git status
+	On branch master
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+		.x
+		.y
+		Account.java
+		Customer.java
+		a.txt
+		b.txt
+		logs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Our mission to not to track a.txt file
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+$ vi .gitignore
+
+And write only file name like a.txt to ignore it
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+
+	$ git status
+	On branch master
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+		.gitignore
+		.x
+		.y
+		Account.java
+		Customer.java
+		b.txt
+		logs/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+To ignore all txt file write only '*.txt'
+
+Ignore all hidden files
+ write '.*'
+
+If you want to ignore all file in directory use
+ (directory_name)/
+ 
+for eg
+logs/
+
+Now we can see result as
+
+xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+
+	$ git status
+	On branch master
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+		Account.java
+		Customer.java
+		b.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ cat .gitignore
+- Ignore a.txt file
+  
+  a.txt
+  
+- Ignore all hidden files
+
+  .*
+
+- Ignore logs directory
+
+  logs/
