@@ -1422,3 +1422,11 @@ We created multiple files, did several commits are said to be in master branch.
 Master branch is default branch/main branch in git.
 
 Generally main source code we will place in master branch.
+
+#### What is the need of creating a branch:
+
+master branch--->for developing web application
+child branch-1---> for Android compability work
+child branch-2--->for iso compata=ibility work
+
+Multiple flows==>parallel development, code base very cleanly.
