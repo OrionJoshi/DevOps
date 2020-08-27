@@ -1448,3 +1448,15 @@ Multiple flows==>parallel development, code base very cleanly.
    branch or we can push that branch directly to the remote repository
 
 Meaning of branch - An independent flow of development.
+
+### Various Git commands related to branching
+
+1. To view available branches:
+
+git branch
+
+$ git branch
+
+- '*' master
+
+- '*' indicates the current active branch(even you can use git status command)
