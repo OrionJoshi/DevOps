@@ -1430,3 +1430,21 @@ child branch-1---> for Android compability work
 child branch-2--->for iso compata=ibility work
 
 Multiple flows==>parallel development, code base very cleanly.
+
+##### Conclusions:
+
+1. Once we create a branch, all files will be inherited from parent branch
+
+   to child branch.In child branch we can create new files and we can perform
+   
+   any changes in existing files and we can commit those changes based on our requirement.
+
+2. All branches are isolated to each other.The changes performed in one branch
+
+   are not visible to other branches even to child branches.
+
+3. Once we completed our work in child branch, we can merge that new branch with master
+
+   branch or we can push that branch directly to the remote repository
+
+Meaning of branch - An independent flow of development.
