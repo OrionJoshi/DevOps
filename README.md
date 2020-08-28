@@ -1460,3 +1460,14 @@ $ git branch
 - '*' master
 
 - '*' indicates the current active branch(even you can use git status command)
+
+2. To create a new branch:
+
+git branch branch_name
+
+git branch androidbr
+
+$ git branch
+  - androidbr
+  
+ - '*' master
