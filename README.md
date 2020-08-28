@@ -1487,3 +1487,21 @@ $ git branch
 '*' androidbr
 
   master
+
+#### Shortcut way:
+
+git checkout -b isobr
+
+It will create iosbr and then switch to that branch
+
+$ git checkout -b iosbr
+
+Switched to a new branch 'iosbr'
+
+$ git branch
+
+  androidbr
+  
+'*' iosbr
+
+  master
