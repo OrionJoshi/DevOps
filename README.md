@@ -1471,3 +1471,19 @@ $ git branch
   - androidbr
   
  - '*' master
+
+3. How to switch from one branch to another branch:
+
+git checkout===>To discard unstaged changes in working dir
+
+git checkout androidbr
+
+$ git checkout androidbr
+
+Switched to branch 'androidbr'
+
+$ git branch
+
+'*' androidbr
+
+  master
