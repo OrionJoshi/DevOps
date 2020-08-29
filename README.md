@@ -1516,3 +1516,22 @@ In nutshell
 3. InSVN if we want to impliment branch we have to create a new directory   
 
    we have to copy all files manually, which is very difficult activity, time cosuming activity
+
+a.) Is git creating a new directory?
+- No git wont create any new directry
+
+b) Is git copy all files from parent to child?
+  No git wont copy all file from parents to child
+
+But It is logical duplication of files.Not physically(see the difference between files of project while switching branches)
+
+In any branch the head is pointing to last commit of that branch
+
+NOTE: Switching from one branch to another just head pointer changes not the files and brectrioes create to seperate branch
+
+
+That is why git branching wont required any efforts. It is very speedy
+
+Branch information 
+.git/refs/heads/master or(branch in which you switch)
+
