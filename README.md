@@ -1505,3 +1505,14 @@ $ git branch
 '*' iosbr
 
   master
+  
+In nutshell
+
+1. all files and commits inherited.
+2. isolated to each other.
+   remember the changes of child branch not inherited in parents
+   And the changes in master after the child branch creataion are not inheritaed  in child
+
+3. InSVN if we want to impliment branch we have to create a new directory   
+
+   we have to copy all files manually, which is very difficult activity, time cosuming activity
