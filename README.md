@@ -1554,3 +1554,12 @@ Branch information
 4. Implemanting new features will become very easy
 5. Bug fixing will become very easy
 6. Testing new ideas or new technologies will become very easy.
+
+### Merging - Fast Forward Merge and Three Way Merge
+
+Merging of a branch:
+
+We created a branch to implement a new feature.
+We completed implementation of that new feature.
+We have to combined those changes from child branch with parent branch.
+This combined process is nothing but merging concept
