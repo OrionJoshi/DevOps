@@ -1563,3 +1563,30 @@ We created a branch to implement a new feature.
 We completed implementation of that new feature.
 We have to combined those changes from child branch with parent branch.
 This combined process is nothing but merging concept
+
+it merge command.
+
+git merge childbranch(from only master branch bez master branch required these changes)
+
+Demo Example:
+
+make 2 commit of 2 files in master and create another branch feature and create two commit
+
+now to merge  use - git merge feature (from master branch)
+
+	$ git merge feature
+	Updating 71c0145..d70ab11
+	Fast-forward
+	 x.txt | 0
+	 y.txt | 0
+	 2 files changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 x.txt
+	 create mode 100644 y.txt
+
+	$ git log --oneline
+	d70ab11 (HEAD -> master, feature) c12f
+	53f3f96 c1f
+	71c0145 c2m
+	9ee13f5 c1m
+
+In this case git performs Fast-forward
