@@ -1545,3 +1545,12 @@ Branch information
    if we have bug in java version 3 so we can clone its branch and fix and push to main branch
 
 4. To test new ideas or new technologies without effecting main code
+
+#### Advantages of branching
+
+1. We can enable parallel development
+2. We can work one multiple flows in isolated way
+3. We can organize source code in clean way
+4. Implemanting new features will become very easy
+5. Bug fixing will become very easy
+6. Testing new ideas or new technologies will become very easy.
