@@ -1590,3 +1590,7 @@ now to merge  use - git merge feature (from master branch)
 	9ee13f5 c1m
 
 In this case git performs Fast-forward
+
+- 2 types of merges:
+  1. Fast-forward
+  2. Three-way merge
