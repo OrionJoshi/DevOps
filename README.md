@@ -1535,3 +1535,13 @@ That is why git branching wont required any efforts. It is very speedy
 Branch information 
 .git/refs/heads/master or(branch in which you switch)
 
+### Multiple use cases and advantages of branching
+
+- Multiple use cases where branching is required???
+
+1. We required to develop a new feature
+2. Hot_fixes in production
+3. To support multiple  versions of same code base
+   if we have bug in java version 3 so we can clone its branch and fix and push to main branch
+
+4. To test new ideas or new technologies without effecting main code
