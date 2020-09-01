@@ -1661,3 +1661,27 @@ Here total 6 commit (5+1(means merge commit))
 	|/
 	* 4d71307 c2m
 	* a393209 c1m
+
+### Difference between fast-forward and 3-way
+
+#### Fast-forward
+
+1.After creating child only child branch is modified but parent branch is not modified
+
+2.It does not required any new commit
+
+3.No chance of conflits.
+
+4.It is fully handled by git
+
+### 3-way
+
+1.After creating child, both parent and child branches are updated
+
+2.A new commit will be created which is also known as merge commit
+
+3.may be chance of conflits
+
+4.If there is conflit we have to handle manually
+
+Note : Alternative of merge is Rebase
