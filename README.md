@@ -1608,3 +1608,56 @@ commit of child branch
 If the same file modified there may be a chance of conflicts.
 In fast forward merge, there is no chance of merge conflicts because  updations happend only
 in child branch but not in parent branch.
+
+#### Three-way merge:
+
+
+After creating child branch if parent branch also contains some new commits, 
+3-way merge.
+
+May be a chance of conflict
+
+Both parent and child branches updated.
+
+git will perform 3 way merge
+
+Here while mergeing master and feature branch a new commit(merge commit) will be create during 3 way merge
+
+because of this we have to commit for that so it open vim editor to commit that merge
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git merge feature
+	hint: Waiting for your editor to close the file...
+	[main 2020-09-01T13:06:20.167Z] update#setState idle
+	[main 2020-09-01T13:06:50.212Z] update#setState checking for updates
+	[main 2020-09-01T13:06:53.916Z] update#setState downloading
+	[main 2020-09-01T13:12:14.465Z] update#setState updating
+	[main 2020-09-01T13:13:02.516Z] update#setState ready
+	Merge made by the 'recursive' strategy.
+	 x.txt | 0
+	 y.txt | 0
+	 2 files changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 x.txt
+	 create mode 100644 y.txt
+
+Here 'recursive' strategy mean three way merge
+
+	$ git log --oneline
+	5310216 (HEAD -> master) Merge branch 'feature' into master
+	8bce090 c3m
+	5cc7545 (feature) c2f
+	36d06e5 c1f
+	4d71307 c2m
+	a393209 c1m
+
+Here total 6 commit (5+1(means merge commit))
+
+	$ git log --oneline --graph
+	*   5310216 (HEAD -> master) Merge branch 'feature' into master
+	|\
+	| * 5cc7545 (feature) c2f
+	| * 36d06e5 c1f
+	* | 8bce090 c3m
+	|/
+	* 4d71307 c2m
+	* a393209 c1m
