@@ -1594,3 +1594,17 @@ In this case git performs Fast-forward
 - 2 types of merges:
   1. Fast-forward
   2. Three-way merge
+
+#### Fast-forward merge:
+
+2 branches: parent(master) And child(feature)
+
+After creating child branch, if we are not doing any changes in parent branch,
+git will perform Fast-forward merge
+
+In the fast-forward merge, git simply moves parent branch pointer to the last
+commit of child branch	
+
+If the same file modified there may be a chance of conflicts.
+In fast forward merge, there is no chance of merge conflicts because  updations happend only
+in child branch but not in parent branch.
