@@ -1685,3 +1685,15 @@ Here total 6 commit (5+1(means merge commit))
 4.If there is conflit we have to handle manually
 
 Note : Alternative of merge is Rebase
+
+### Merge confilt
+
+
+If the same file modified by both parent and child branches then git halts merge
+process and raise conflit message.
+
+Git will markup both brnches content in the file to resolve the conflict very easily.
+
+We have to edit the file manually to finalize content.
+
+We have to add to the staging area and then we have to perform commit.
