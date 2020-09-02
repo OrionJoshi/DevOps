@@ -1697,3 +1697,92 @@ Git will markup both brnches content in the file to resolve the conflict very ea
 We have to edit the file manually to finalize content.
 
 We have to add to the staging area and then we have to perform commit.
+
+#### Merge Conflits Demo examples:
+
+
+$ git init
+
+Initialized empty Git repository in C:/Users/xSHADOWx/Desktop/project/.git/
+
+	$ echo 'First line Added' > a.txt
+
+	$ git add a.txt;git commit -m 'c1m'
+	warning: LF will be replaced by CRLF in a.txt.
+	The file will have its original line endings in your working directory
+	[master (root-commit) 4a819fa] c1m
+	 1 file changed, 1 insertion(+)
+	 create mode 100644 a.txt
+
+	$ echo "Second line Added" >> a.txt
+
+	$ git add a.txt;git commit -m 'c2m'
+	warning: LF will be replaced by CRLF in a.txt.
+	The file will have its original line endings in your working directory
+	[master 487b69c] c2m
+	 1 file changed, 1 insertion(+)
+
+	$ ls
+	a.txt
+
+	$ git log --oneline
+	487b69c (HEAD -> master) c2m
+	4a819fa c1m
+
+
+	$ git checkout -b feature
+	Switched to a new branch 'feature'
+
+	$ echo "New data added by Feature Branch" >> a.txt
+
+	$ git add a.txt;git commit -m 'c1f'
+	warning: LF will be replaced by CRLF in a.txt.
+	The file will have its original line endings in your working directory
+	[feature 9f8f84e] c1f
+	 1 file changed, 1 insertion(+)
+
+	$ cat a.txt
+	First line Added
+	Second line Added
+	New data added by Feature Branch
+
+	$ git checkout master
+	Switched to branch 'master'
+
+	$ cat a.txt
+	First line Added
+	Second line Added
+
+	$ echo "New dat Added by master branch" >> a.txt
+
+	$ git add a.txt;git commit -m 'c3m'
+	warning: LF will be replaced by CRLF in a.txt.
+	The file will have its original line endings in your working directory
+	[master 0674cba] c3m
+	 1 file changed, 1 insertion(+)
+
+	$ git merge feature
+	Auto-merging a.txt
+	CONFLICT (content): Merge conflict in a.txt
+	Automatic merge failed; fix conflicts and then commit the result.
+
+	$ git status
+	On branch master
+	You have unmerged paths.
+	  (fix conflicts and run "git commit")
+	  (use "git merge --abort" to abort the merge)
+
+	Unmerged paths:
+	  (use "git add <file>..." to mark resolution)
+		both modified:   a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+	$ cat a.txt
+	First line Added
+	Second line Added
+	<<<<<<< HEAD
+	New dat Added by master branch
+	=======
+	New data added by Feature Branch
+	>>>>>>> feature
