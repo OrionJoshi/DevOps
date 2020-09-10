@@ -1821,3 +1821,20 @@ Command:
 	Deleted branch feature (was 9f8f84e).
 
 Here all the commits of deleted branches are available but only pointer to that branch is not there
+
+### Rebasing Concept and Demo Example
+
+Base commit - The commit from which branches happen
+
+In merge concepts
+- Graph is non linear
+- A new commit(merge commit) created.
+- May be chance of merge conflits.
+
+Requriments
+1. Linear Flow instead of non-linear flow(clear flow)
+2. New commits should not be created like merge commit
+3. We should not have any conflits.
+
+For these requirements to fullfill we have a concepts similar to merge is Rebase
+
