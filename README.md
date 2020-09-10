@@ -1838,3 +1838,7 @@ Requriments
 
 For these requirements to fullfill we have a concepts similar to merge is Rebase
 
+#### Rebase operation:
+
+Rebase is alternative to merge operation(3-way merge).
+Rebase==>Re+Base===>Re arrange Base
