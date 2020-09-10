@@ -1879,3 +1879,126 @@ so there is fast-forward merge where no any concept of conflits
 
 From above steps we have history become linear.Every commits has a single parents only.
 
+#### Demo Example:
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ touch a.txt b.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git add a.txt;git commit -m 'c1m'
+	[master (root-commit) 39a26a9] c1m
+	 1 file changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 a.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git add b.txt;git commit -m 'c2m'
+	[master 5496151] c2m
+	 1 file changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 b.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git log --oneline
+	5496151 (HEAD -> master) c2m
+	39a26a9 c1m
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git checkout -b feature
+	Switched to a new branch 'feature'
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ touch x.txt y.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git add x.txt;git commit -m 'c1f'
+	[feature 59451f4] c1f
+	 1 file changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 x.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git add y.txt;git commit -m 'c2f'
+	[feature e3cfa00] c2f
+	 1 file changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 y.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git log --oneline
+	e3cfa00 (HEAD -> feature) c2f
+	59451f4 c1f
+	5496151 (master) c2m
+	39a26a9 c1m
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git checkout master
+	Switched to branch 'master'
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git touch c.txt
+	git: 'touch' is not a git command. See 'git --help'.
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ touch c.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git add c.txt;git commit -m 'c3m'
+	[master 67ff2d5] c3m
+	 1 file changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 c.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git log feature
+	commit e3cfa00fc55deb87ce00c268adf082a9df68798c (feature)
+	Author: khageshwor <khageshwarjoshi03@gmail.com>
+	Date:   Sun Sep 6 16:54:54 2020 +0545
+
+	    c2f
+
+	commit 59451f42a9d8f763ed7ed49ff701bf9a856e8301
+	Author: khageshwor <khageshwarjoshi03@gmail.com>
+	Date:   Sun Sep 6 16:54:26 2020 +0545
+
+	    c1f
+
+	commit 5496151de8f02fd6e089718a98d4c8ad49266830
+	Author: khageshwor <khageshwarjoshi03@gmail.com>
+	Date:   Sun Sep 6 16:51:56 2020 +0545
+
+	    c2m
+
+	commit 39a26a9ec189a6228fa2145c6771b6e9f7d8ef34
+	Author: khageshwor <khageshwarjoshi03@gmail.com>
+	Date:   Sun Sep 6 16:51:19 2020 +0545
+
+	    c1m
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git log --oneline feature
+	e3cfa00 (feature) c2f
+	59451f4 c1f
+	5496151 c2m
+	39a26a9 c1m
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git log --oneline master
+	67ff2d5 (HEAD -> master) c3m
+	5496151 c2m
+	39a26a9 c1m
+
+	Step-1: Rebase feature branch on top of master
+	-----------------------------
+
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git checkout feature
+	Switched to branch 'feature'
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git rebase master
+	Successfully rebased and updated refs/heads/feature.
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git log --oneline feature
+	b3075fc (HEAD -> feature) c2f
+	f546e2a c1f
+	67ff2d5 (master) c3m
+	5496151 c2m
+	39a26a9 c1m
