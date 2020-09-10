@@ -1842,3 +1842,40 @@ For these requirements to fullfill we have a concepts similar to merge is Rebase
 
 Rebase is alternative to merge operation(3-way merge).
 Rebase==>Re+Base===>Re arrange Base
+
+
+#### Process of rebasing:
+
+
+We know merge is a single step process
+
+git merge feature
+
+But In rebase it is 2-step process.
+
+Step-1: We have to rebase feature branch on top of master branch
+Step-2: We have to merge feature branch into mester branch(Fast-forward merge)
+
+Step-1
+
+- git checkout feature
+- git rebase master
+
+Whatever new commits are there in the feature branch will be duplicated by git.
+
+Here everything(like commit message, timestamp, author name, mail id) is same except
+commit ids.
+
+The base commit of feature branch will be updated as last commit of the parent branch.
+
+
+Step-2
+
+- git checkout master
+- git merge feature
+
+In this step the pointer of master goes to last commit of feature branch
+so there is fast-forward merge where no any concept of conflits
+
+From above steps we have history become linear.Every commits has a single parents only.
+
