@@ -1798,3 +1798,26 @@ We have to add and commit it(merge commit)
 
 	$ git commit -m 'Resolved Merge Conflits'
 	[master f40a269] Resolved Merge Conflits
+
+### How to Delete a Branch
+
+Created a branch
+
+	implemented a new feature
+	
+		merged that branch into master branch	
+			Now we have to delete a branch
+
+Deletion of branch is optional.
+But we have to delete To keep our repository clean
+
+Command:
+
+	git branch -d <branch_name>
+
+	e.g.
+
+	$ git branch -d feature
+	Deleted branch feature (was 9f8f84e).
+
+Here all the commits of deleted branches are available but only pointer to that branch is not there
