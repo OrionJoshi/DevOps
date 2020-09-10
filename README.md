@@ -2138,3 +2138,48 @@ details of these branchez
 
 NOTE: Rebase is very dangerous operation and it is never recommended to use on
       Public repositories beacause it rewrites history.
+
+### Difference between merge and rebase
+
+Merge:
+-----
+
+1. It is a single step process.
+
+	git checkout master
+	
+	git merge feature
+
+2. merge perserve history of all commits.
+
+3. The commits can have more than one parent and hence history is not linear
+
+4. Conflits
+
+5. We can aware which changes are comming from feature branch
+
+6. We can use merge on public repositories
+
+Rebase
+-------
+Merge:
+
+1. It is a two step process.
+
+	git checkout feature
+	
+	git rebase master
+
+	git chekout master
+	
+	git merge feature
+
+2. Rebase clears history of feature branch
+
+3. Every commits can have single parent and hence history is linear
+
+4. No chance of Conflits
+
+5. We cannot aware which changes are comming from feature branch
+
+6. Not recommended on public repositories but in local repositories
