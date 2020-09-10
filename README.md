@@ -2002,3 +2002,112 @@ From above steps we have history become linear.Every commits has a single parent
 	67ff2d5 (master) c3m
 	5496151 c2m
 	39a26a9 c1m
+Here look the difference earlier and after the rebase
+
+earlier
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git log --oneline feature
+	e3cfa00 (feature) c2f
+	59451f4 c1f
+	5496151 c2m
+	39a26a9 c1m
+
+After
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git log --oneline feature
+	b3075fc (HEAD -> feature) c2f
+	f546e2a c1f
+	67ff2d5 (master) c3m
+	5496151 c2m
+	39a26a9 c1m
+
+Here the commit id of c1f and c2f are changes but all the contents are same as it is only
+duplicate object are formed
+
+And another changes is there are 4 and here are 5 commits this means that the rebase of the feature 
+branch is changes to last master branch commit
+
+Proof
+	
+Before
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git log feature
+	commit e3cfa00fc55deb87ce00c268adf082a9df68798c (feature)
+	Author: khageshwor <khageshwarjoshi03@gmail.com>
+	Date:   Sun Sep 6 16:54:54 2020 +0545
+
+	    c2f
+
+	commit 59451f42a9d8f763ed7ed49ff701bf9a856e8301
+	Author: khageshwor <khageshwarjoshi03@gmail.com>
+	Date:   Sun Sep 6 16:54:26 2020 +0545
+
+	    c1f
+
+After
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git log feature
+	commit b3075fcde5ee15777dd097872eb8e9884f794f46 (HEAD -> feature)
+	Author: khageshwor <khageshwarjoshi03@gmail.com>
+	Date:   Sun Sep 6 16:54:54 2020 +0545
+
+	    c2f
+
+	commit f546e2a64325f32a875d386a1b6417e9bfb0cd44
+	Author: khageshwor <khageshwarjoshi03@gmail.com>
+	Date:   Sun Sep 6 16:54:26 2020 +0545
+
+	    c1f
+
+All inforamation are same excepts commit id
+
+Now lets see the graph
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git log --oneline --graph
+	* b3075fc (HEAD -> feature) c2f
+	* f546e2a c1f
+	* 67ff2d5 (master) c3m
+	* 5496151 c2m
+	* 39a26a9 c1m
+
+First step is like after creating a child branch there is no any changes in master branch
+because the base commit changes to latest master commit
+
+Step-2:
+
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (feature)
+	$ git checkout master
+	Switched to branch 'master'
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git merge feature
+	Updating 67ff2d5..b3075fc
+	Fast-forward
+	 x.txt | 0
+	 y.txt | 0
+	 2 files changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 x.txt
+	 create mode 100644 y.txt
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git log --oneline --graph master
+	* b3075fc (HEAD -> master, feature) c2f
+	* f546e2a c1f
+	* 67ff2d5 c3m
+	* 5496151 c2m
+	* 39a26a9 c1m
+
+Graph is linear and clear
+
+Earlier the master is pointing to c3m but now after the step-2 it points to the
+latest of feature branch
+
+	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
+	$ git branch -d feature
+	Deleted branch feature (was b3075fc).
