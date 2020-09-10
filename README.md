@@ -2111,3 +2111,30 @@ latest of feature branch
 	xSHADOWx@DESKTOP-OTH8UK2 MINGW64 ~/Desktop/project (master)
 	$ git branch -d feature
 	Deleted branch feature (was b3075fc).
+
+#### Advantages and Disadvantage of rebasing, differences with merge
+
+
+##### Advantage of Rebase
+
+1. Rebase keeps history linear.Every commit has a single parent.
+2. clear work flow(linear) will be there. Easy to understand for developers.
+3. Fast forward merge, no chance of conflits.
+4. No extra commit like merge commit.
+
+##### Disadvantages:
+
+1. It rewrites history.We cannot see history of commit from the feature branch
+
+2. We does not aware which changes are comming from feature branch
+
+Note: 
+
+Rebase is recommend for merging only local branches not public repository
+
+Because in public multiple developer works and we have to know each and every 
+      
+details of these branchez
+
+NOTE: Rebase is very dangerous operation and it is never recommended to use on
+      Public repositories beacause it rewrites history.
