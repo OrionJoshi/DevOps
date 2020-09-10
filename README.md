@@ -1786,3 +1786,15 @@ no changes added to commit (use "git add" and/or "git commit -a")
 	=======
 	New data added by Feature Branch
 	>>>>>>> feature
+
+vi a.txt or using merge tool we have to resolve
+
+From vi editor remove 3, 5, 7 line by using 'dd' one that line and save it
+
+We have to add and commit it(merge commit)
+
+	$ git add a.txt
+
+
+	$ git commit -m 'Resolved Merge Conflits'
+	[master f40a269] Resolved Merge Conflits
